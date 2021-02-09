@@ -3,11 +3,11 @@ name: release
 on:
   workflow_run:
     workflows: [dump]
-    branches:
-      - main
-      - 'releases/**'
+    # branches:
+    #   - main
+    #   - 'releases/**'
     types:
-      - completed
+      - completed  # remember completed does not mean success!
     create:
 
 jobs:

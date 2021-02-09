@@ -2,7 +2,7 @@ name: release
 
 on:
   workflow_run:
-    workflows: [dump]
+    workflows: [check]
     # branches:
     #   - main
     #   - 'releases/**'
@@ -11,7 +11,7 @@ on:
     create:
 
 jobs:
-  dump:
+  release:
     runs-on: ubuntu-latest
     steps:
       -

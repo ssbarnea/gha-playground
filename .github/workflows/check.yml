@@ -1,13 +1,17 @@
-name: dump
+name: check
 
 on:
-  create:
+  # create:
   push:
+    branches:
+      - main
+    tags:
+      - "*"
   pull_request:
-  release:
+  # release:
 
 jobs:
-  dump:
+  check:
     runs-on: ubuntu-latest
     steps:
       -

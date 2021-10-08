@@ -26,5 +26,5 @@ jobs:
       - name: Display git info about clone
         run: git tag --points-at HEAD
 
-      - name: Now we fail
-        run: exit 1
+      # - name: Now we fail
+      #  run: exit 0

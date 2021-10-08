@@ -18,7 +18,7 @@ jobs:
 
   release:
     environment: release
-    name: release
+    name: release ${{ github.event.ref }}
     needs: before-release
 
     runs-on: ubuntu-latest

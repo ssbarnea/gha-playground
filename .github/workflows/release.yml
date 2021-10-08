@@ -12,6 +12,7 @@ on:
 
 jobs:
   release:
+    environment: release
     if: event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:

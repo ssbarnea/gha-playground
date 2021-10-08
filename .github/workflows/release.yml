@@ -14,7 +14,6 @@ on:
 
 jobs:
   before-release:
-    runs-on: ubuntu-latest
     uses: ssbarnea/gha-playground/.github/workflows/check.yml@main
 
   release:

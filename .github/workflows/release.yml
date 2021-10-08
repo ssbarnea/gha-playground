@@ -13,7 +13,6 @@ on:
 jobs:
   release:
     environment: release
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       -
@@ -27,3 +26,7 @@ jobs:
 
       - name: Display git info about clone
         run: git tag --points-at HEAD
+
+      - name: Fail if checks did not pass previously
+        if: ${{ github.event.workflow_run.conclusion == 'success' }}
+        run: exit 1

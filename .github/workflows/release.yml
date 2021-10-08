@@ -13,14 +13,14 @@ on:
     tags:
 
 jobs:
-  check:
+  before-release:
     runs-on: ubuntu-latest
     uses: ssbarnea/gha-playground/.github/workflows/check.yml@main
 
   release:
     environment: release
     name: release
-    needs: check
+    needs: before-release
 
     runs-on: ubuntu-latest
     steps:

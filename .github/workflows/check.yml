@@ -16,7 +16,7 @@ jobs:
     steps:
       -
         name: Dump context
-        uses: crazy-max/ghaction-dump-context@v1.2.0
+        uses: crazy-max/ghaction-dump-context@v1.2.1
 
       - name: Check out src from Git
         uses: actions/checkout@v2.3.4

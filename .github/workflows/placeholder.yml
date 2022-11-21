@@ -1,0 +1,7 @@
+on:
+jobs:
+  placeholder:
+    runs-on: ubuntu-latest
+    container: ghcr.io/ansible/creator:0.9.0
+    steps:
+      - run: echo "Running 1.2.0"

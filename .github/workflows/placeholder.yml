@@ -1,0 +1,11 @@
+# This workflow is is not ever run, but we use it in order to get
+# dependabot to update the container when new version is released.
+name: placeholder
+on:
+  workflow_dispatch:
+jobs:
+  placeholder:
+    runs-on: ubuntu-latest
+    container: ghcr.io/ansible/creator-ee:v0.10.5
+    steps:
+      - run: ansible-lint --version

@@ -14,9 +14,9 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      -
-        name: Dump context
-        uses: crazy-max/ghaction-dump-context@v1.2.1
+      # -
+      #   name: Dump context
+      #   uses: crazy-max/ghaction-dump-context@v1.2.1
 
       - name: Check out src from Git
         uses: actions/checkout@v3.1.0
@@ -26,5 +26,9 @@ jobs:
       - name: Display git info about clone
         run: git tag --points-at HEAD
 
-      # - name: Now we fail
-      #  run: exit 0
+      - name: Run ansible-lint
+        # replace `main` with any valid ref, or tags like `v6`
+        uses: ssbarnea/ansible-lint@v6.16.3
+        # optional:
+        # with:
+        #   path: "playbooks/"  # <-- only one value is allowed

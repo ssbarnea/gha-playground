@@ -10,3 +10,4 @@ name: ack
 jobs:
   ack:
     uses: ssbarnea/devtools/.github/workflows/ack.yml@main
+    secrets: inherit
